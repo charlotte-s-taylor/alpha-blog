@@ -1,15 +1,31 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>AlphaBlog</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
-  <body>
-    <%= render 'layouts/messages' %>
-    <%= yield %>
-  </body>
+<html>
+
+<head>
+
+  <title>AlphaBlog</title>
+
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+
+  <%= csrf_meta_tags %>
+
+</head>
+
+<body>
+
+<%= render 'layouts/_navigation' %>
+<%= render 'layouts/messages' %>
+<div class="container">
+
+</div>
+
+  <%= yield %>
+
+<%= render 'layouts/footer' %>
+
+</body>
+
 </html>
